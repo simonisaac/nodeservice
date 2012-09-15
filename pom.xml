@@ -15,7 +15,6 @@
 		<module>nodeservice.web</module>
 		<module>nodeservice.mule</module>
 		<module>nodeservice.transform.excel</module>
-		<module>nodeservice.core.nodemgr.mongo</module>
 	</modules>
 	<properties>
 		<nodeservice.version>3.0.2.1</nodeservice.version>
@@ -101,7 +100,6 @@
 			<plugin>
         		<groupId>org.apache.maven.plugins</groupId>
         		<artifactId>maven-source-plugin</artifactId>
-        		<version>${mvn.source.plugin.version}</version>
         		<executions>
 		        	<execution>
 		            	<id>attach-sources</id>

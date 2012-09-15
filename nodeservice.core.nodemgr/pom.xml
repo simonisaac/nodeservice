@@ -17,6 +17,12 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${junit.version}</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
 			<groupId>javax.activation</groupId>
 			<artifactId>activation</artifactId>
 			<version>${javax.activation.version}</version>
