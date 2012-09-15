@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://model.service.nodedef.core.nodeservice.sri.org" targetNamespace="http://model.service.nodedef.core.nodeservice.sri.org"
+	elementFormDefault="qualified" attributeFormDefault="unqualified">
+
+	<xs:element name="languageDef" type="languageDefTO" />
+
+	<xs:complexType name="languageDefTO">
+		<xs:sequence>
+			<xs:element name="description" type="xs:string" />
+			<xs:element name="nodeDef" type="nodeDefTO" maxOccurs="unbounded" minOccurs="0" />
+			<xs:element name="typeExDef" type="typeExDefTO" maxOccurs="unbounded" minOccurs="0" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="nodeDefTO">
+		<xs:sequence>
+			<xs:element name="id" type="xs:string" />
+			<xs:element name="attributes" type="attrDefMap" minOccurs="0" maxOccurs="unbounded" />
+			<xs:element name="childSetDefs" type="nodeSetDefMap" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="attrDefMap">
+		<xs:sequence>
+			<xs:element name="id" type="xs:string" />
+			<xs:element name="attrDef" type="attrDefTO" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="attrDefTO">
+		<xs:sequence>
+			<xs:element name="id" type="xs:string" />
+			<xs:element name="typeId" type="xs:string" />
+			<xs:element name="label" type="xs:string" />
+			<xs:element name="defaultValue" type="xs:string" />
+			<xs:element name="mandatory" type="xs:boolean" />
+			<xs:element name="readonly" type="xs:boolean" />
+			<xs:element name="constraints" type="typeConstraintDefTO" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="typeConstraintDefTO">
+		<xs:sequence>
+			<xs:element name="id" type="xs:string" />
+			<xs:element name="applicableTypes" type="xs:string" minOccurs="0" maxOccurs="unbounded" />
+			<xs:element name="parameterList" type="typeConstraintParameterTO" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="typeConstraintParameterTO">
+		<xs:sequence>
+			<xs:element name="name" type="xs:string" />
+			<xs:element name="value" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="nodeSetDefMap">
+		<xs:sequence>
+			<xs:element name="id" type="xs:string" />
+			<xs:element name="nodeSetDef" type="nodeSetDefTO" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="nodeSetDefTO">
+		<xs:sequence>
+			<xs:element name="id" type="xs:string" />
+			<xs:element name="nodeType" type="xs:string" />
+			<xs:element name="minOccurances" type="xs:int" />
+			<xs:element name="maxOccurances" type="xs:int" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="typeExDefTO">
+		<xs:sequence>
+			<xs:element name="id" type="xs:string" />
+			<xs:element name="parentId" type="xs:string" />
+			<xs:element name="constraints" type="typeConstraintDefTO" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+
+</xs:schema>

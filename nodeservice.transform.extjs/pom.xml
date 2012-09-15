@@ -1,0 +1,40 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<artifactId>nodeservice</artifactId>
+		<groupId>org.sri.nodeservice</groupId>
+		<version>3.0.2.1</version>
+	</parent>
+	<groupId>org.sri.nodeservice</groupId>
+	<artifactId>nodeservice.transform.extjs</artifactId>
+	<name>MSILM Node Service (Extjs Transformation)</name>
+	<dependencies>
+		<dependency>
+			<groupId>org.sri.nodeservice</groupId>
+			<artifactId>nodeservice.core</artifactId>
+			<version>${nodeservice.version}</version>
+			<type>jar</type>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.sri.nodeservice</groupId>
+			<artifactId>nodeservice.transform.common</artifactId>
+			<version>${nodeservice.version}</version>
+			<type>jar</type>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>net.sf.flexjson</groupId>
+			<artifactId>flexjson</artifactId>
+			<version>${flexjson.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.sri.nodeservice</groupId>
+			<artifactId>nodeservice.core.nodemgr</artifactId>
+			<version>${nodeservice.version}</version>
+			<scope>compile</scope>
+		</dependency>
+	</dependencies>
+</project>

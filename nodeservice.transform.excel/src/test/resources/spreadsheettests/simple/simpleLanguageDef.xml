@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p:languageDef
+	xmlns:p="http://model.service.nodedef.core.nodeservice.sri.org"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://model.service.nodedef.core.nodeservice.sri.org languageDef.xsd ">
+
+	<p:nodeDef>
+		<p:id>test3SheetType</p:id>
+		
+		<p:attributes>
+			<p:id>A - String</p:id>
+			<p:attrDef>
+				<p:id>A - String</p:id>
+				<p:typeId>STRING</p:typeId>
+				<p:label>A String</p:label>
+				<p:defaultValue>A String Value</p:defaultValue>
+				<p:mandatory>false</p:mandatory>
+				<p:readonly>false</p:readonly>
+			</p:attrDef>
+		</p:attributes>
+		
+		<p:attributes>
+			<p:id>B - Number</p:id>
+			<p:attrDef>
+				<p:id>B - Number</p:id>
+				<p:typeId>LONG</p:typeId>
+				<p:label>A String</p:label>
+				<p:defaultValue>A String Value</p:defaultValue>
+				<p:mandatory>false</p:mandatory>
+				<p:readonly>false</p:readonly>
+			</p:attrDef>
+		</p:attributes>
+		
+		<p:attributes>
+			<p:id>C - Decimal</p:id>
+			<p:attrDef>
+				<p:id>C - Decimal</p:id>
+				<p:typeId>STRING</p:typeId>
+				<p:label>A String</p:label>
+				<p:defaultValue>A String Value</p:defaultValue>
+				<p:mandatory>false</p:mandatory>
+				<p:readonly>false</p:readonly>
+			</p:attrDef>
+		</p:attributes>
+		
+		<p:attributes>
+			<p:id>D - Date</p:id>
+			<p:attrDef>
+				<p:id>D - Date</p:id>
+				<p:typeId>DATE</p:typeId>
+				<p:label>A String</p:label>
+				<p:defaultValue>A String Value</p:defaultValue>
+				<p:mandatory>false</p:mandatory>
+				<p:readonly>false</p:readonly>
+			</p:attrDef>
+		</p:attributes>
+		
+		<p:attributes>
+			<p:id>E - Pound</p:id>
+			<p:attrDef>
+				<p:id>E - Pound</p:id>
+				<p:typeId>STRING</p:typeId>
+				<p:label>A String</p:label>
+				<p:defaultValue>A String Value</p:defaultValue>
+				<p:mandatory>false</p:mandatory>
+				<p:readonly>false</p:readonly>
+			</p:attrDef>
+		</p:attributes>
+		
+		<p:attributes>
+			<p:id>F - Formula</p:id>
+			<p:attrDef>
+				<p:id>F - Formula</p:id>
+				<p:typeId>STRING</p:typeId>
+				<p:label>A String</p:label>
+				<p:defaultValue>A String Value</p:defaultValue>
+				<p:mandatory>false</p:mandatory>
+				<p:readonly>false</p:readonly>
+			</p:attrDef>
+		</p:attributes>
+				
+		<p:attributes>
+			<p:id>G - Text</p:id>
+			<p:attrDef>
+				<p:id>G - Text</p:id>
+				<p:typeId>STRING</p:typeId>
+				<p:label>A String</p:label>
+				<p:defaultValue>A String Value</p:defaultValue>
+				<p:mandatory>false</p:mandatory>
+				<p:readonly>false</p:readonly>
+			</p:attrDef>
+		</p:attributes>
+		
+		<p:attributes>
+			<p:id>H - String Formula</p:id>
+			<p:attrDef>
+				<p:id>H - String Formula</p:id>
+				<p:typeId>STRING</p:typeId>
+				<p:label>A String</p:label>
+				<p:defaultValue>A String Value</p:defaultValue>
+				<p:mandatory>false</p:mandatory>
+				<p:readonly>false</p:readonly>
+			</p:attrDef>
+		</p:attributes>
+		
+		<p:attributes>
+			<p:id>I - Time Type</p:id>
+			<p:attrDef>
+				<p:id>I - Time Type</p:id>
+				<p:typeId>STRING</p:typeId>
+				<p:label>A String</p:label>
+				<p:defaultValue>A String Value</p:defaultValue>
+				<p:mandatory>false</p:mandatory>
+				<p:readonly>false</p:readonly>
+			</p:attrDef>
+		</p:attributes>
+		
+	</p:nodeDef>
+
+	<p:nodeDef>
+		<p:id>testExcel</p:id>
+
+		<p:childSetDefs>
+			<p:id>rows</p:id>
+			<p:nodeSetDef>
+				<p:id>rows</p:id>
+				<p:nodeType>test3SheetType</p:nodeType>
+				<p:minOccurances>1</p:minOccurances>
+				<p:maxOccurances>-1</p:maxOccurances>
+			</p:nodeSetDef>
+		</p:childSetDefs>
+	</p:nodeDef>
+
+</p:languageDef>
